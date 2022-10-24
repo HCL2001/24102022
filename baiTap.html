@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1080px" height="720px"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas").getContext("2d");
+        let myRectangle = function (dai, rong){
+            this.dai = dai;
+            this.rong = rong;
+            this.dientich = function dientich(){
+                return dai * rong;
+            }
+            this.chuvi = function chuvi(){
+                return (dai + rong) / 2;
+            }
+            function canvas(){
+                c.moveTo(dai, rong);
+                c.lineTo(dai, rong);
+                c.stroke();
+            }
+
+
+
+        }
+
+        let Rect = new myRectangle(3, 4);
+        alert(Rect.dientich());
+        alert(Rect.chuvi());
+    </script>
+</body>
+</html>
