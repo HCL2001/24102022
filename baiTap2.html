@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var myTemper = function (Cel){
+            this.Cel = Cel;
+            this.DoF = function (){
+                return Cel * 32.5;
+            }
+
+            this.Kenvin = function (){
+                return Cel * 20.2;
+            }
+        };
+
+        let temper = new myTemper(25);
+
+        alert(temper.DoF());
+        alert(temper.Kenvin());
+    </script>
+</body>
+</html>
